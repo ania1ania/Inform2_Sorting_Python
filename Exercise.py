@@ -2,7 +2,7 @@ import CheckIt
 
 def b(t):
 	for i in range(len(t) - 1):
-		if t[i] < t[i + 1]:
+		if t[i] > t[i + 1]:
 			t[i], t[i + 1] = t[i + 1], t[i]
 	return t
 
