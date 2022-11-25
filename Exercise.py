@@ -1,8 +1,14 @@
 import CheckIt
 
 def sort_b(t):
-    # zdefiniuj funkcję i sprawdź jej działanie
-    pass
+    isSorted = 0
+    while 0 == isSorted:
+        isSorted = 1
+        for i in range(len(t) - 1):
+            if t[i] > t[i + 1]:
+                isSorted = 0
+                t[i], t[i + 1] = t[i + 1], t[i]
+    return t
 
 print("")
 print("Wyniki testów:")
