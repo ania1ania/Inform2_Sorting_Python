@@ -1,24 +1,11 @@
 
 import CheckIt
+from random import randint
 
-def trzy(a, b, c):
-    if a > b:
-        pom = a
-    else:
-        pom = b
-    if pom > c:
-        return pom
-    else:
-        return c
+def losuj(rozmiar, od, do):
+    # zdefiniuj funkcję i sprawdź jej działanie
+    pass 
 
-print("")
-print("Wyniki testów:")
-print("-----------------------+------------+-----------+-----------")
-print(" Test                  | Oczekiwano | Otrzymano | Wynik")
-print("-----------------------+------------+-----------+-----------")
-print(" trzy(10, 10, 10)      | 10         | ", trzy(10, 10, 10),"      |", CheckIt.checkIt(10, trzy(10, 10, 10)))
-print("-----------------------+------------+-----------+-----------")
-print(" trzy(112, 99, 112)    | 112        | ", trzy(112, 99, 112),"     |", CheckIt.checkIt(112, trzy(112, 99, 112)))
-print("-----------------------+------------+-----------+-----------")
-print(" trzy(456, 456, 455)   | 456        | ", trzy(456, 456, 455),"     |", CheckIt.checkIt(456, trzy(456, 456, 455)))
-print("")
+print ("Lista 12 elementów od 3 do 8", losuj(12, 3, 8))
+print ("Lista 16 elementów od 1 do 10", losuj(16, 1, 10))
+print ("Lista 20 elementów od 0 do 10", losuj(20, 0, 10))
