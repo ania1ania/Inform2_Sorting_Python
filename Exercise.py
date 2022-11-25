@@ -1,13 +1,20 @@
-
 import CheckIt
-from random import randint
 
-def losuj(rozmiar, od, do):
-    list = []
-    for x in range(rozmiar):
-        list += [randint(od, do)]
-    return list
+def b(t):
+	for i in range(len(t) - 1):
+		if t[i] < t[i + 1]:
+			t[i], t[i + 1] = t[i + 1], t[i]
+	return t
 
-print ("Lista 12 elementów od 3 do 8", losuj(12, 3, 8))
-print ("Lista 16 elementów od 1 do 10", losuj(16, 1, 10))
-print ("Lista 20 elementów od 0 do 10", losuj(20, 0, 10))
+print("")
+print("Wyniki testów:")
+print("-----------------------+--------------------+---------------------+-----------")
+print(" Test                  | Oczekiwano         | Otrzymano           | Wynik")
+print("-----------------------+--------------------+---------------------+-----------")
+print("  b([1, 2, 3, 4, 5])   | [1, 2, 3, 4, 5]    | ", b([1, 2, 3, 4, 5]),"   |", CheckIt.checkList([1, 2, 3, 4, 5], (b([1, 2, 3, 4, 5]))))
+print("-----------------------+--------------------+---------------------+-----------")
+print(" b([31, 71, 5, 0, 12]) | [31, 5, 0, 12, 71] | ", b([31, 71, 5, 0, 12]),"|", CheckIt.checkList([31, 5, 0, 12, 71], b([31, 71, 5, 0, 12])))
+print("-----------------------+--------------------+---------------------+-----------")
+print(" b([5, 5, 2, 2, 0])    | [5, 2, 2, 0, 5]    | ", b([5, 5, 2, 2, 0]),"   |", CheckIt.checkList([5, 2, 2, 0, 5], b([5, 5, 2, 2, 0])))
+print("")
+
