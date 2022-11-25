@@ -7,9 +7,13 @@ def checkIt(a, b):
 
 def checkList(a, b):
     isEqual = 1
-    for x in range(len(a)):
-        if a[x] != b[x]:
-            isEqual = 0
+    if len(a) == len(b):
+        for x in range(len(a)):
+            if a[x] != b[x]:
+                isEqual = 0
+    else:
+        isEqual = 0
+        
     if isEqual:
         return "Pozytywny"
     else:
