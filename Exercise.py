@@ -10,8 +10,8 @@ def wstawianie(t, x):
         return t
     # pozostałe przypadki kiedy wstawiamy wewnątrz listy.
     for i in range(len(t) - 1):
-        if x >= t[i] and x < t[i + 1]:
-            t.insert(i+1, x)
+        if x > t[i] and x < t[i + 1]:
+            t.insert(i + 1, x)
             return t        # po wstawieniu kończymy pętlę
 
 
