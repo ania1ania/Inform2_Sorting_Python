@@ -2,11 +2,11 @@ import CheckIt
 
 def sort_b(t):
     isSorted = 0
-    while 0 == isSorted:
-        isSorted = 1
+    while 0 == isSorted:    # sortujemy dopóki flaga isSorted nie zostanie przestawiona w pętli for
+        isSorted = 1    # flaga ustawiana podczas iteracji jeżeli trzeba bylo dokonoć zamiany elementów - sortowania
         for i in range(len(t) - 1):
             if t[i] > t[i + 1]:
-                isSorted = 0
+                isSorted = 0    # będzie zamiana (sortowanie) elementów t[i] i t[i +1]
                 t[i], t[i + 1] = t[i + 1], t[i]
     return t
 
