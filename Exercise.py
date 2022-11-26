@@ -1,9 +1,33 @@
 import CheckIt
 
 
+def wstawianie(t, x):
+    if x < t[0]:  # przypadek kiedy trzeba wstawić na początku listy
+        t.insert(0, x)
+        return t
+    if x > t[len(t) - 1]:   # przypadek kiedy trzeba wstawić na końcu listy
+        t.insert(len(t), x)
+        return t
+    # pozostałe przypadki kiedy wstawiamy wewnątrz listy.
+    for i in range(len(t) - 1):
+        if x > t[i] and x < t[i + 1]:
+            t.insert(i+1, x)
+            return t        # po wstawieniu kończymy pętlę
+
+
+# sortowanie przez wstawianie
+def sort_w(t):
+    pom = []  # nowa lista
+    pom = pom + [t[0]]
+    for i in range(1, len(t)):
+        # wstawia kolejne elementy w nowo tworzonej liście pom
+        wstawianie(pom, t[i])
+    return pom
+
+
 def ile_liczb(tab):
-    # zdefiniuj funkcję i sprawdź jej działanie
-    pass
+    v = sort_w(tab)   # ta wersja sortowania przez wstawianie usuwa zdublowane elementy
+    return len(v)  # zwracam dugość zmodyfikowanej listy
 
 
 print("")
