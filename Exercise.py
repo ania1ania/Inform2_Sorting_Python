@@ -2,10 +2,10 @@ import CheckIt
 
 
 def wstawianie(t, x):
-    if x < t[0]:  # przypadek kiedy trzeba wstawić na początku listy
+    if x <= t[0]:  # przypadek kiedy trzeba wstawić na początku listy
         t.insert(0, x)
         return t
-    if x > t[len(t) - 1]:   # przypadek kiedy trzeba wstawić na końcu listy
+    if x >= t[len(t) - 1]:   # przypadek kiedy trzeba wstawić na końcu listy
         t.insert(len(t), x)
         return t
     # pozostałe przypadki kiedy wstawiamy wewnątrz listy.
